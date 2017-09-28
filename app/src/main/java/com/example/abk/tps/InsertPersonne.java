@@ -48,10 +48,10 @@ public class InsertPersonne extends AppCompatActivity {
                 CommentaireEd.getText().toString());
 
         /* on ouvre la base de données pour écrire dedans */
-        repertoireBdd.open();
+        //repertoireBdd.open();
 
         /* on insert dans notre Base de données */
-        repertoireBdd.insertPersonne(perosnne);
+        //repertoireBdd.insertPersonne(perosnne);
 
         Toast.makeText(getApplicationContext(), perosnne.toString(), Toast.LENGTH_SHORT).show();
     }
