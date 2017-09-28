@@ -6,7 +6,8 @@ import android.support.v7.app.*;
 import android.content.Intent;
 import android.view.*;
 import android.widget.*;
-
+import android.database.*;
+import java.util.*;
 
 public class InsertPersonne extends AppCompatActivity {
 
@@ -53,7 +54,35 @@ public class InsertPersonne extends AppCompatActivity {
         /* on insert dans notre Base de données */
         repertoireBdd.insertPersonne(perosnne);
 
-        Toast.makeText(getApplicationContext(), perosnne.toString(), Toast.LENGTH_SHORT).show();
+        /**/
+        Cursor c = repertoireBdd.getAllData();
+
+        if(c == null)
+            Toast.makeText(getApplicationContext(), "table vide", Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(getApplicationContext(), "table non vide : "+c.getString(5), Toast.LENGTH_SHORT).show();
+        /**/
+        /*Vector<Personne > personnesV = new Vector<Personne>();
+        while(c.moveToNext()){
+
+            Personne p = new Personne(c.getString(1),c.getString(2),
+                                        c.getString(3),c.getString(4),
+                                        c.getString(5),c.getString(6));
+            personnesV.add(p);
+
+        }*/
+        /**/
+        /*if (c.getCount()==0){
+            showMessage("Error","Aucun objet inseré dans la BD");
+            return;
+        }*/
+        /**/
+        //for(Personne persone : personnesV){
+            //Toast.makeText(getApplicationContext(), c.getCount(), Toast.LENGTH_SHORT).show();
+        //}
+
+        repertoireBdd.close();
+        //Toast.makeText(getApplicationContext(), perosnne.toString(), Toast.LENGTH_SHORT).show();
     }
 
     void showMessage(String title, String message){

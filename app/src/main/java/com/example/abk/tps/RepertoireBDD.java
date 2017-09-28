@@ -16,7 +16,7 @@ public class RepertoireBDD {
     private static final int VERSION_BDD = 1;
     private static final String NOM_BDD = "personne.db";
 
-    private static final String TABLE_PERSONNES = "table_personne";
+    private static final String TABLE_PERSONNES = "table_repertoires";
     private static final String COL_ID = "ID";
     private static final int NUM_COL_ID = 0;
     private static final String COL_NAME = "NAME";
@@ -64,13 +64,13 @@ public class RepertoireBDD {
         //Création d'un ContentValues (fonctionne comme une HashMap)
         ContentValues values = new ContentValues();
         //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne dans laquelle on veut mettre la valeur)
-        values.put(COL_ID, personne.getId());
-        values.put(COL_NAME, personne.getName());
-        values.put(COL_PRENOM, personne.getPrenom());
-        values.put(COL_TEL,personne.getTel());
-        values.put(COL_EMAIL,personne.getEmail());
-        values.put(COL_ADDRESS,personne.getAddress());
-        values.put(COL_COMMENTAIRE,personne.getCommentaire());
+        values.put(COL_ID, "1");
+        values.put(COL_NAME, "a");
+        values.put(COL_PRENOM, "b");
+        values.put(COL_TEL,"06");
+        values.put(COL_EMAIL,"g");
+        values.put(COL_ADDRESS,"f");
+        values.put(COL_COMMENTAIRE,"e");
         //on insère l'objet dans la BDD via le ContentValues
 
         bdd.insert(TABLE_PERSONNES, null, values);
@@ -78,7 +78,7 @@ public class RepertoireBDD {
 
     public Cursor getAllData(){
         Cursor res = bdd.query(TABLE_PERSONNES, new String[] {COL_ID, COL_NAME, COL_PRENOM,COL_TEL,
-                COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},  null, null, null, null,null);
+                COL_EMAIL,COL_ADDRESS},  null, null, null, null,null);
         return res;
     }
 

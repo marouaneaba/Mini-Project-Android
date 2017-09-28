@@ -25,10 +25,10 @@ public class MaBaseSQlite extends SQLiteOpenHelper{
             + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL_NAME + " TEXT NOT NULL, "
             + COL_PRENOM + " TEXT NOT NULL, "
-            + COL_TEL + " NUMBER NOT NULL, "
+            + COL_TEL + " TEXT NOT NULL, "
             + COL_EMAIL + " TEXT NOT NULL, "
             + COL_ADDRESS + " TEXT NOT NULL, "
-            + COL_COMMENTAIRE +"TEXT NOT NULL);";
+            + COL_COMMENTAIRE +" TEXT NOT NULL );";
 
 
 
