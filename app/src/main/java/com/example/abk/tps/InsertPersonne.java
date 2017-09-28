@@ -56,11 +56,11 @@ public class InsertPersonne extends AppCompatActivity {
 
         /**/
         Cursor c = repertoireBdd.getAllData();
-
+            c.moveToFirst();
         if(c == null)
             Toast.makeText(getApplicationContext(), "table vide", Toast.LENGTH_SHORT).show();
         else
-            Toast.makeText(getApplicationContext(), "table non vide : "+c.getString(5), Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "table non vide : "+c.getString(6), Toast.LENGTH_SHORT).show();
         /**/
         /*Vector<Personne > personnesV = new Vector<Personne>();
         while(c.moveToNext()){
