@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.0.1_672adbc5c0254cd0a947054139ef534373f255a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.0.1_1fd6155394f603962aa656a57deb39e55de53b01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.0.1_697182f33ed44b5bd09bf880e8981e79d65656bc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_67f14a2ca0f281bafb79989d7bace0964bbc867f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.0.1_d12663af0dd0f08c3b0761bc36629dff21003a64.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_6648bfe803c1a1b4e3eb8fdddc926f2ff1d4fe24.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.0.1_10309208bf19cf4bfb3dac9e704387d6afcb1044.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.0.1_395603fadf0ddce491c6a96be95abcc33f728ff4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_b7e0efc89d2b8971886b20f6a2477ba02517f533.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_93016a2b22b0dc9ab2a68966217106d7cfbd362a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_01ae5e44bcaff8894f744c3bcddecc279193f389.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.1_98bc626e2cadfad98ebcd216d023d57f22aeffea.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.0.1_46849be69e2e92c2ef94bdae9741d589f2c9d7d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.0.1_9fa3c6cb086b61314288c403ceee34d72fa93460.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="C:\Users\abk\Desktop\Android Tps\tps\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.0.1_8c5db7820eb5b13012af002a3c1c85a5414b3bfb.jar" />
+    </item>
+
+</items>
