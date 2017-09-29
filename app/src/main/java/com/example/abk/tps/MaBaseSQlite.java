@@ -23,7 +23,6 @@ public class MaBaseSQlite extends SQLiteOpenHelper{
     private static final String COL_COMMENTAIRE = "COMMENTAIRE";
     private static final String CREATE_BDD = "CREATE TABLE " + TABLE_NAME + "("
             + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            //+ COL_ID + " INTEGER, "
             + COL_NAME + " TEXT NOT NULL, "
             + COL_PRENOM + " TEXT NOT NULL, "
             + COL_TEL + " TEXT NOT NULL, "

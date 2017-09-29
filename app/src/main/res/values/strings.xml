@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">tps</string>
+    <string name="menu">menu</string>
+    <string name="creer">Creer</string>
+    <string name="visualiser">Visualiser</string>
+    <string name="Recherche">Recherche</string>
+
 </resources>
