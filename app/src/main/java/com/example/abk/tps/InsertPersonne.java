@@ -54,28 +54,40 @@ public class InsertPersonne extends AppCompatActivity {
         /* on insert dans notre Base de données */
         repertoireBdd.insertPersonne(perosnne);
 
-        /**/
+        /*récupération tout les données stocker dans la BD*/
         Cursor c = repertoireBdd.getAllData();
+
+        /* montrez aù premier ligne de notre BD */
             c.moveToFirst();
-        if(c == null)
+
+        /*if(c == null)
             Toast.makeText(getApplicationContext(), "table vide", Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(getApplicationContext(), "table non vide : "+c.getString(6), Toast.LENGTH_SHORT).show();
+            */
+
         /**/
-        /*Vector<Personne > personnesV = new Vector<Personne>();
+        Vector<Personne> personnesV = new Vector<Personne>();
+        int i=0;
         while(c.moveToNext()){
 
             Personne p = new Personne(c.getString(1),c.getString(2),
                                         c.getString(3),c.getString(4),
                                         c.getString(5),c.getString(6));
+            Toast.makeText(getApplicationContext(),"i : "+i+" ," +p.toString(), Toast.LENGTH_SHORT).show();
+            i++;
             personnesV.add(p);
+        }
 
-        }*/
+        for(i=0;i<personnesV.size();i++){
+            Toast.makeText(getApplicationContext(), "i : "+i+" ,"+personnesV.get(i).toString(), Toast.LENGTH_SHORT).show();
+        }
         /**/
-        /*if (c.getCount()==0){
+        if (c.getCount()==0){
             showMessage("Error","Aucun objet inseré dans la BD");
             return;
-        }*/
+        }
+        //Toast.makeText(getApplicationContext(), "tab size : "+personnesV.size()+" ,BD size : "+c.getCount(), Toast.LENGTH_SHORT).show();
         /**/
         //for(Personne persone : personnesV){
             //Toast.makeText(getApplicationContext(), c.getCount(), Toast.LENGTH_SHORT).show();

@@ -64,13 +64,13 @@ public class RepertoireBDD {
         //Création d'un ContentValues (fonctionne comme une HashMap)
         ContentValues values = new ContentValues();
         //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne dans laquelle on veut mettre la valeur)
-        values.put(COL_ID, "4");
-        values.put(COL_NAME, "a");
-        values.put(COL_PRENOM, "b");
-        values.put(COL_TEL,"06");
-        values.put(COL_EMAIL,"g");
-        values.put(COL_ADDRESS,"f");
-        values.put(COL_COMMENTAIRE,"e");
+        //values.put(COL_ID, personne.getId());
+        values.put(COL_NAME, personne.getName());
+        values.put(COL_PRENOM, personne.getPrenom());
+        values.put(COL_TEL,personne.getTel());
+        values.put(COL_EMAIL,personne.getEmail());
+        values.put(COL_ADDRESS,personne.getAddress());
+        values.put(COL_COMMENTAIRE,personne.getCommentaire());
         //on insère l'objet dans la BDD via le ContentValues
 
         bdd.insert(TABLE_PERSONNES, null, values);
