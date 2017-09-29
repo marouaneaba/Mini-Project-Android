@@ -48,12 +48,12 @@ public class Menu extends AppCompatActivity {
                 //((TextView)findViewById(R.id.texte)).setText("CreerUnLivre");
                 return true;
             case R.id.visualiserContact:
-                Intent intent2 = new Intent(Menu.this, VisualiserLivre.class);
+                Intent intent2 = new Intent(Menu.this, Visualiser.class);
                 startActivity(intent2);
                 //((TextView)findViewById(R.id.texte)).setText("VisualiserLivres");
                 return true;
             case R.id.RechercheContact :
-                Intent intent3 = new Intent(Menu.this,rechercher_livre.class);
+                Intent intent3 = new Intent(Menu.this,rechercher.class);
                 startActivity(intent3);
                 return true;
             case R.id.quitter:
