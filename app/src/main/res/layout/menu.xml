@@ -3,14 +3,55 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="@string/menu"
-        android:textSize="50px"
-        android:textColor="#C4C"
-        android:textStyle="bold|italic"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:id="@+id/texte" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/menu"
+            android:textSize="50px"
+            android:textColor="#C4C"
+            android:textStyle="bold|italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:id="@+id/texte" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Créer Contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ajout"
+            android:onClick="CreerMethode"/>
+
+        <Button
+            android:text="visualiser Contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/afficher"
+            android:onClick="VisualiserMethode"/>
+
+        <Button
+            android:text="Recherche Contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recherch"
+            android:onClick="RecherchMethode"/>
+
+        <Button
+            android:text="Quitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/quitter"
+            android:onClick="QuitterMethode"/>
+
+    </LinearLayout>
 
 </LinearLayout>

@@ -3,7 +3,6 @@ package com.example.abk.tps;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.app.*;
-import android.content.Intent;
 import android.view.*;
 import android.widget.*;
 import android.database.*;
@@ -25,7 +24,7 @@ public class InsertPersonne extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.insert_personne);
 
         NameEd = (EditText)findViewById(R.id.nameeditText);
         PrenomEd = (EditText)findViewById(R.id.prenomeditText3);
@@ -51,14 +50,27 @@ public class InsertPersonne extends AppCompatActivity {
         /* on ouvre la base de données pour écrire dedans */
         repertoireBdd.open();
 
+        /*récupération tout les données stocker dans la BD*/
+        Cursor c = repertoireBdd.getAllData();
+
+        int old_count = c.getCount();
+
         /* on insert dans notre Base de données */
         repertoireBdd.insertPersonne(perosnne);
 
         /*récupération tout les données stocker dans la BD*/
-        Cursor c = repertoireBdd.getAllData();
+        c = repertoireBdd.getAllData();
+        int new_count = c.getCount();
+
+        if(old_count != new_count) {
+            Clear();
+            showMessage("insertion Contact", "Votre Contact est bien insérer");
+        }
+        else if(old_count == new_count)
+            showMessage("insertion Contact", "Erreur Contact, Veuillez vérifier votre contact ");
 
         /* montrez aù premier ligne de notre BD */
-            c.moveToFirst();
+            //c.moveToFirst();
 
         /*if(c == null)
             Toast.makeText(getApplicationContext(), "table vide", Toast.LENGTH_SHORT).show();
@@ -67,7 +79,7 @@ public class InsertPersonne extends AppCompatActivity {
             */
 
         /**/
-        Vector<Personne> personnesV = new Vector<Personne>();
+        /*Vector<Personne> personnesV = new Vector<Personne>();
         int i=0;
         while(c.moveToNext()){
 
@@ -81,12 +93,13 @@ public class InsertPersonne extends AppCompatActivity {
 
         for(i=0;i<personnesV.size();i++){
             Toast.makeText(getApplicationContext(), "i : "+i+" ,"+personnesV.get(i).toString(), Toast.LENGTH_SHORT).show();
-        }
+        }*/
         /**/
-        if (c.getCount()==0){
+        /*if (c.getCount()==0){
             showMessage("Error","Aucun objet inseré dans la BD");
             return;
-        }
+        }*/
+
         //Toast.makeText(getApplicationContext(), "tab size : "+personnesV.size()+" ,BD size : "+c.getCount(), Toast.LENGTH_SHORT).show();
         /**/
         //for(Personne persone : personnesV){
@@ -106,6 +119,10 @@ public class InsertPersonne extends AppCompatActivity {
     }
 
     public void vider(View v)
+    {
+        Clear();
+    }
+    public void Clear()
     {
         NameEd.setText("");
         PrenomEd.setText("");
