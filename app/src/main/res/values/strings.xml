@@ -6,5 +6,6 @@
     <string name="Recherche">Recherche</string>
     <string name="AfficherContact">AfficherContact</string>
     <string name="ModifierContact">ModifierContact</string>
+    <string name="RechercherContact">RechercherContact</string>
 
 </resources>

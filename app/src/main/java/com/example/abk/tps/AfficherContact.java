@@ -1,9 +1,12 @@
 package com.example.abk.tps;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +19,27 @@ public class AfficherContact extends AppCompatActivity {
 
 
         private TextView Name,Prenom,Tel,Email,Adress,Commentaire;
+        private int id;
+        private RepertoireBDD repertoireBDD;
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        actualiser();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        repertoireBDD.close();
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+        repertoireBDD.open();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +55,20 @@ public class AfficherContact extends AppCompatActivity {
 
 
          /* création d'une instance de la classe RepertoireBDD */
-        RepertoireBDD repertoireBDD = new RepertoireBDD(this);
+        repertoireBDD = new RepertoireBDD(this);
 
         /* on ouvre la base de données pour écrire dedans */
-        repertoireBDD.open();
+        //repertoireBDD.open();
 
         /* on insér le contact dans la base de données */
 
-
-        Personne p = repertoireBDD.getPersonneById(1);
+        Intent intent = getIntent();
+        int position = Integer.parseInt(intent.getStringExtra("numero"));
+        id = position+1;
+        //actualiser();
+        /*
+        //Toast.makeText(getApplicationContext(), "position : "+position, Toast.LENGTH_SHORT).show();
+        Personne p = repertoireBDD.getPersonneById(position+1);
         repertoireBDD.close();
 
         Name.setText(p.getName());
@@ -47,10 +76,30 @@ public class AfficherContact extends AppCompatActivity {
         Tel.setText(p.getTel());
         Email.setText(p.getEmail());
         Adress.setText(p.getAddress());
+        Commentaire.setText(p.getCommentaire());*/
+
+    }
+
+    public void actualiser(){
+        Personne p = repertoireBDD.getPersonneById(id);
+
+
+        Name.setText(p.getName());
+        Prenom.setText(p.getPrenom());
+        Tel.setText(p.getTel());
+        Email.setText(p.getEmail());
+        Adress.setText(p.getAddress());
         Commentaire.setText(p.getCommentaire());
+    }
 
+    public void Annuler(View v){
+        finish();
+    }
 
+    public void Modifier(View v){
 
-
+        Intent intent = new Intent(AfficherContact.this, ModifierContact.class);
+        intent.putExtra("id",""+id);
+        startActivity(intent);
     }
 }

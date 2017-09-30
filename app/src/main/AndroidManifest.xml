@@ -27,6 +27,8 @@
             android:label="@string/AfficherContact"/>
         <activity android:name=".ModifierContact"
             android:label="@string/ModifierContact"/>
+        <activity android:name=".RechercherContact"
+            android:label="@string/RechercherContact"/>
 
         <!-- <activity android:name=".InsertPersonne">
             <intent-filter>

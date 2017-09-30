@@ -20,9 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/EName"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -43,9 +42,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/EPrenom"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -67,7 +65,7 @@
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:ems="10"
-            android:id="@+id/editText3"
+            android:id="@+id/ETel"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -88,9 +86,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
-            android:id="@+id/editText4"
+            android:id="@+id/EEmail"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -111,9 +108,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
-            android:text="Name"
             android:ems="10"
-            android:id="@+id/editText5"
+            android:id="@+id/EAddress"
             android:layout_weight="1" />
 
     </LinearLayout>
@@ -125,10 +121,9 @@
         android:id="@+id/TCommentaire" />
 
     <MultiAutoCompleteTextView
-        android:text="MultiAutoCompleteTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/CommentaireText"
+        android:id="@+id/ECommentaire"
         android:layout_weight="0.69" />
 
     <LinearLayout
@@ -141,14 +136,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bt1"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="Eregistrer"/>
 
         <Button
             android:text="Annuler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/bt2"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:onClick="Annuler"/>
     </LinearLayout>
 
 </LinearLayout>

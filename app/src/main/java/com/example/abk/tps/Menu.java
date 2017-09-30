@@ -37,10 +37,10 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    /*public void RecherchMethode(View v){
-        Intent intent = new Intent(Menu.this, InsertPersonne.class);
+    public void RecherchMethode(View v){
+        Intent intent = new Intent(Menu.this, RechercherContact.class);
         startActivity(intent);
-    }*/
+    }
 
     public void QuitterMethode(View v){
         finish();

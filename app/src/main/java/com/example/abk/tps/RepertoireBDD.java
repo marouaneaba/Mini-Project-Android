@@ -89,6 +89,30 @@ public class RepertoireBDD {
         return cursorToPersonne(c);
     }
 
+    public Cursor getPersonneByOther(String name,String prenom,String tel,String email,String adress,String commentaire)
+    {
+        Cursor c = bdd.query(TABLE_PERSONNES,new String[]{COL_ID,COL_NAME,COL_PRENOM,COL_TEL,
+                COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},"NAME like "+"'%"+name+"%'",null,null,null,null);
+        return c;
+    }
+
+    public void SupprimerWithId(int id){
+        bdd.delete(TABLE_PERSONNES,COL_ID+" = " + id, null);
+    }
+
+    public int updateById(int id,Personne personne){
+        //La mise à jour d'un Contact dans la BDD fonctionne plus ou moins comme une insertion
+        //il faut simple préciser quelle contact on doit mettre à jour grâce à l'ID
+        ContentValues values = new ContentValues();
+        values.put(COL_NAME, personne.getName());
+        values.put(COL_PRENOM, personne.getPrenom());
+        values.put(COL_TEL,personne.getTel());
+        values.put(COL_EMAIL,personne.getEmail());
+        values.put(COL_ADDRESS,personne.getAddress());
+        values.put(COL_COMMENTAIRE,personne.getCommentaire());
+        return bdd.update(TABLE_PERSONNES,values, COL_ID + "=" +id, null);
+    }
+
     public Personne cursorToPersonne(Cursor c){
 
         if (c.getCount() == 0)
@@ -107,7 +131,7 @@ public class RepertoireBDD {
         personne.setCommentaire(c.getString(NUM_COL_COMMENTAIRE));
 
         //On ferme le cursor
-        c.close();
+        //c.close();
 
         //On retourne le livre
         return personne;

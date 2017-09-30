@@ -107,6 +107,7 @@ public class InsertPersonne extends AppCompatActivity {
         //}
 
         repertoireBdd.close();
+        //finish();
         //Toast.makeText(getApplicationContext(), perosnne.toString(), Toast.LENGTH_SHORT).show();
     }
 
