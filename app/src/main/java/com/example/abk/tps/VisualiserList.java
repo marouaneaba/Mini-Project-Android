@@ -26,7 +26,7 @@ public class VisualiserList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.visualiserList);
+        setContentView(R.layout.visualiser_list);
 
 
         // Recherche la vue affichant la liste
