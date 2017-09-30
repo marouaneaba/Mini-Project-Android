@@ -80,6 +80,10 @@ public class Visualiser extends AppCompatActivity {
             public void onItemClick(AdapterView<?> a, View v, int position, long id) {
                 //on récupère la HashMap contenant les infos de notre item (titre, description, img)
                 HashMap<String, String> map = (HashMap<String, String>) RepertoireList.getItemAtPosition(position);
+
+
+
+                /*
                 //on créer une boite de dialogue
                 AlertDialog.Builder adb = new AlertDialog.Builder(Visualiser.this);
                 //on attribut un titre à notre boite de dialogue
@@ -90,6 +94,7 @@ public class Visualiser extends AppCompatActivity {
                 adb.setPositiveButton("Ok", null);
                 //on affiche la boite de dialogue
                 adb.show();
+                */
             }
         });
         

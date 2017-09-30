@@ -76,11 +76,11 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:inputType="number"
+                android:inputType="phone"
                 android:ems="10"
                 android:id="@+id/numeroeditText9"
-                android:layout_weight="0.09"
-                android:hint="Entrez le Numéro" />
+                android:layout_weight="10.86"
+                android:hint="Entrez Numéro" />
 
         </LinearLayout>
 
