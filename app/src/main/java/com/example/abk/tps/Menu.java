@@ -32,7 +32,6 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    
     public void VisualiserMethode(View v){
         Intent intent = new Intent(Menu.this, VisualiserList.class);
         startActivity(intent);
