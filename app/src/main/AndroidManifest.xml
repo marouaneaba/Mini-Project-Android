@@ -23,6 +23,10 @@
         <activity android:name=".VisualiserList"
             android:label="@string/visualiser"/>
 
+        <activity android:name=".AfficherContact"
+            android:label="@string/AfficherContact"/>
+        <activity android:name=".ModifierContact"
+            android:label="@string/ModifierContact"/>
 
         <!-- <activity android:name=".InsertPersonne">
             <intent-filter>

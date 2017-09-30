@@ -4,5 +4,7 @@
     <string name="creer">Creer</string>
     <string name="visualiser">Visualiser</string>
     <string name="Recherche">Recherche</string>
+    <string name="AfficherContact">AfficherContact</string>
+    <string name="ModifierContact">ModifierContact</string>
 
 </resources>
