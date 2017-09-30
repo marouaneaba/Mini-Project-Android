@@ -54,10 +54,10 @@ public class Visualiser extends AppCompatActivity {
             Map<String, String> bookMap_i = new HashMap<String, String>();
             bookMap_i.put("Name", c.getString(1));
             bookMap_i.put("Prenom", c.getString(2));
-            //bookMap_i.put("Tel", c.getString(3));
+            bookMap_i.put("Tel", c.getString(3));
             bookMap_i.put("Email", c.getString(4));
-            //bookMap_i.put("Adderess", c.getString(5));
-            //bookMap_i.put("Commentaire", c.getString(6));
+            bookMap_i.put("Adderess", c.getString(5));
+            bookMap_i.put("Commentaire", c.getString(6));
 
             listOfPersonne_i.add(bookMap_i);
 
