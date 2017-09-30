@@ -20,7 +20,7 @@
         <activity android:name=".InsertPersonne"
             android:label="@string/creer"/>
 
-        <activity android:name=".Visualiser"
+        <activity android:name=".VisualiserList"
             android:label="@string/visualiser"/>
 
 

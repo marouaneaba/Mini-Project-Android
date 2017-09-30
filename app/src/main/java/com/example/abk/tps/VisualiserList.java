@@ -4,25 +4,29 @@ package com.example.abk.tps;
  * Created by abk on 29/09/2017.
  */
 
-import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v7.app.*;
 import android.view.*;
 import android.widget.*;
 import android.content.Intent;
 import java.util.*;
 
-public class Visualiser extends AppCompatActivity {
+public class VisualiserList extends AppCompatActivity {
 
 
     private ListView RepertoireList;
+    private FragmentManager fm = getSupportFragmentManager();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.visualiser);
+        setContentView(R.layout.visualiserList);
 
 
         // Recherche la vue affichant la liste
@@ -74,6 +78,48 @@ public class Visualiser extends AppCompatActivity {
         //Associe l’adapter et le ListView
         RepertoireList.setAdapter(listAdapter);
 
+        RepertoireList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                //on récupère la HashMap contenant les infos de notre item (titre, description, img)
+                HashMap<String, String> map = (HashMap<String, String>) RepertoireList.getItemAtPosition(position);
+
+                /*DFragement dfragment= new DFragement();
+
+
+                dfragment.show(fm,"gerer livre");*/
+
+                //on créer une boite de dialogue
+                AlertDialog.Builder adb = new AlertDialog.Builder(VisualiserList.this);
+                //on attribut un titre à notre boite de dialogue
+                adb.setTitle("Contact Sélection : "+map.get("Name")+" "+map.get("Prenom"));
+                //on insère un message à notre boite de dialogue, et ici on affiche le titre de l'item cliqué
+                adb.setMessage("voulez vous Vraiment suprimer se contact");
+                //on indique que l'on veut le bouton ok à notre boite de dialogue
+                adb.setPositiveButton("Ok", new DialogInterface.OnClickListener(){
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Toast.makeText(getApplicationContext(), "clique OK", Toast.LENGTH_SHORT).show();
+                    }
+
+                });
+                //on indique que l'on veut le bouton ok à notre boite de dialogue
+                adb.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        // cancel button
+                        Toast.makeText(getApplicationContext(), "clique Cancel", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                //on affiche la boite de dialogue
+                adb.show();
+
+                return true;
+            }
+        });
+
+        //Enfin on met un écouteur d'évènement sur notre listView
         RepertoireList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             @SuppressWarnings("unchecked")
@@ -82,19 +128,8 @@ public class Visualiser extends AppCompatActivity {
                 HashMap<String, String> map = (HashMap<String, String>) RepertoireList.getItemAtPosition(position);
 
 
-
-                /*
-                //on créer une boite de dialogue
-                AlertDialog.Builder adb = new AlertDialog.Builder(Visualiser.this);
-                //on attribut un titre à notre boite de dialogue
-                adb.setTitle("Sélection Item");
-                //on insère un message à notre boite de dialogue, et ici on affiche le titre de l'item cliqué
-                adb.setMessage("Votre choix : "+map.get("Name"));
-                //on indique que l'on veut le bouton ok à notre boite de dialogue
-                adb.setPositiveButton("Ok", null);
-                //on affiche la boite de dialogue
-                adb.show();
-                */
+                Intent intent = new Intent(VisualiserList.this, AfficherContact.class);
+                startActivity(intent);
             }
         });
         

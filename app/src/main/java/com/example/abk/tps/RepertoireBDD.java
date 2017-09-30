@@ -82,8 +82,14 @@ public class RepertoireBDD {
         return res;
     }
 
+    public Personne getPersonneById(int id)
+    {
+        Cursor c = bdd.query(TABLE_PERSONNES,new String[]{COL_ID,COL_NAME,COL_PRENOM,COL_TEL,
+                COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},"ID like "+"'%"+id+"%'",null,null,null,null);
+        return cursorToPersonne(c);
+    }
 
-    private Personne cursorToPersonne(Cursor c){
+    public Personne cursorToPersonne(Cursor c){
 
         if (c.getCount() == 0)
             return null;

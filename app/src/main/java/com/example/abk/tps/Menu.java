@@ -33,7 +33,7 @@ public class Menu extends AppCompatActivity {
     }
 
     public void VisualiserMethode(View v){
-        Intent intent = new Intent(Menu.this, Visualiser.class);
+        Intent intent = new Intent(Menu.this, VisualiserList.class);
         startActivity(intent);
     }
 
@@ -75,7 +75,7 @@ public class Menu extends AppCompatActivity {
                 //((TextView)findViewById(R.id.texte)).setText("CreerUnLivre");
                 return true;
             case R.id.visualiserContact:
-                Intent intent2 = new Intent(Menu.this, Visualiser.class);
+                Intent intent2 = new Intent(Menu.this, VisualiserList.class);
                 startActivity(intent2);
                 //((TextView)findViewById(R.id.texte)).setText("VisualiserLivres");
                 return true;
