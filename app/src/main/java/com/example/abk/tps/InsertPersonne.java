@@ -43,8 +43,10 @@ public class InsertPersonne extends AppCompatActivity {
         /* création d'une instance de la classe LivreBDD */
         RepertoireBDD repertoireBdd = new RepertoireBDD(this);
 
+
+
         Personne perosnne = new Personne(NameEd.getText().toString(),PrenomEd.getText().toString(),
-                TelEd.getText().toString(),EmailEd.getText().toString(),AddresseEd.getText().toString(),
+                TelEd.getText().toString().replaceAll(" ",""),EmailEd.getText().toString(),AddresseEd.getText().toString(),
                 CommentaireEd.getText().toString());
 
         /* on ouvre la base de données pour écrire dedans */
@@ -107,6 +109,7 @@ public class InsertPersonne extends AppCompatActivity {
         //}
 
         repertoireBdd.close();
+        //finish();
         //finish();
         //Toast.makeText(getApplicationContext(), perosnne.toString(), Toast.LENGTH_SHORT).show();
     }

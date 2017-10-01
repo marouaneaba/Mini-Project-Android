@@ -101,8 +101,8 @@ public class RepertoireBDD {
                 + "' or NAME like  '"+ name
                 + "' or PRENOM like '% "+ prenom
                 + "' or PRENOM like '"+ prenom
-                + "' or TEL like '% "+ tel
                 + "' or TEL like '"+ tel
+                + "' or TEL like '%"+ tel
                 + "' or EMAIL like '% "+ email
                 + "' or EMAIL like '"+ email
                 + "' or ADDRESS like '% "+ adress

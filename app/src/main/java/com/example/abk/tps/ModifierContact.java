@@ -56,7 +56,7 @@ public class ModifierContact extends AppCompatActivity {
     {
         //repertoireBDD.open();
         Personne p = new Personne(EName.getText().toString(),EPrenom.getText().toString(),
-                                    ETel.getText().toString(),EEmail.getText().toString(),
+                                    ETel.getText().toString().replaceAll(" ",""),EEmail.getText().toString(),
                                     EAddress.getText().toString(),ECommentaire.getText().toString());
 
         repertoireBDD.updateById(position,p);

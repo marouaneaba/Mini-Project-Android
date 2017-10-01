@@ -4,148 +4,167 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:text="Name :"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/TName"
-            android:layout_weight="1" />
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/EName"
-            android:layout_weight="1" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-    </LinearLayout>
+                <TextView
+                    android:text="Name :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TName"
+                    android:layout_weight="1" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/EName"
+                    android:layout_weight="1" />
 
-        <TextView
-            android:text="Prénom :"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/TPrenom"
-            android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/EPrenom"
-            android:layout_weight="1" />
+                <TextView
+                    android:text="Prénom :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TPrenom"
+                    android:layout_weight="1" />
 
-    </LinearLayout>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/EPrenom"
+                    android:layout_weight="1" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:text="Tél :"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/TTel"
-            android:layout_weight="1" />
+                <TextView
+                    android:text="Tél :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TTel"
+                    android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:ems="10"
-            android:id="@+id/ETel"
-            android:layout_weight="1" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:ems="10"
+                    android:id="@+id/ETel"
+                    android:layout_weight="1" />
 
-    </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <TextView
+                    android:text="Email :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TEmail"
+                    android:layout_weight="1" />
 
-        <TextView
-            android:text="Email :"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/TEmail"
-            android:layout_weight="1" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/EEmail"
+                    android:layout_weight="1" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/EEmail"
-            android:layout_weight="1" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <TextView
+                    android:text="Address :"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/TAddress"
+                    android:layout_weight="1" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/EAddress"
+                    android:layout_weight="1" />
 
-        <TextView
-            android:text="Address :"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/TAddress"
-            android:layout_weight="1" />
+            </LinearLayout>
+            <TextView
+                android:text="Commentaire :"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TCommentaire" />
 
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/EAddress"
-            android:layout_weight="1" />
+            <MultiAutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ECommentaire"
+                android:layout_weight="0.69" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-    </LinearLayout>
+                <Button
+                    android:text="Enregistrer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt1"
+                    android:layout_weight="1"
+                    android:onClick="Eregistrer"/>
 
-    <TextView
-        android:text="Commentaire :"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/TCommentaire" />
+                <Button
+                    android:text="Annuler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt2"
+                    android:layout_weight="1"
+                    android:onClick="Annuler"/>
+            </LinearLayout>
 
-    <MultiAutoCompleteTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/ECommentaire"
-        android:layout_weight="0.69" />
+        </LinearLayout>
+    </ScrollView>
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <Button
-            android:text="Enregistrer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bt1"
-            android:layout_weight="1"
-            android:onClick="Eregistrer"/>
 
-        <Button
-            android:text="Annuler"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/bt2"
-            android:layout_weight="1"
-            android:onClick="Annuler"/>
-    </LinearLayout>
+
+
+
+
+
+
+
+
 
 </LinearLayout>
