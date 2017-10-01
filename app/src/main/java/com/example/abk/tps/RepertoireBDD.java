@@ -91,9 +91,60 @@ public class RepertoireBDD {
 
     public Cursor getPersonneByOther(String name,String prenom,String tel,String email,String adress,String commentaire)
     {
-        Cursor c = bdd.query(TABLE_PERSONNES,new String[]{COL_ID,COL_NAME,COL_PRENOM,COL_TEL,
-                COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},"NAME like "+"'%"+name+"%'",null,null,null,null);
+        /*Cursor c = bdd.query(TABLE_PERSONNES,new String[]{COL_ID,COL_NAME,COL_PRENOM,COL_TEL,
+                COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},"NAME like "+name+"% OR PRENOM like "+prenom+"% " +
+                "OR TEL like "+tel+"% OR EMAIL like "+email+"% OR ADDRESS like "+adress+"% " +
+                "OR COMMENTAIRE like "+commentaire+"% ",null,null,null,null);*/
+
+        String selectQuery = " select distinct * from "+TABLE_PERSONNES+" where "
+                +"NAME like  '% "+ name
+                + "' or NAME like  '"+ name
+                + "' or PRENOM like '% "+ prenom
+                + "' or PRENOM like '"+ prenom
+                + "' or TEL like '% "+ tel
+                + "' or TEL like '"+ tel
+                + "' or EMAIL like '% "+ email
+                + "' or EMAIL like '"+ email
+                + "' or ADDRESS like '% "+ adress
+                + "' or ADDRESS like '"+ adress
+                + "' or COMMENTAIRE like '% "+ commentaire
+                + "' or COMMENTAIRE like '"+ commentaire+"'";
+         //+ "' ORDER BY Customer_Id DESC";
+
+
+        Cursor c = bdd.rawQuery(selectQuery, null);
+
         return c;
+    }
+
+    public List<Map<String, String>> CursorToVectorPersonne(Cursor c){
+
+
+
+        c.moveToFirst();
+        List<Map<String, String>> listOfPersonne_i = new ArrayList<Map<String, String>>();
+
+        while(!c.isAfterLast()){
+
+            Personne p = new Personne(c.getString(1),c.getString(2),
+                    c.getString(3),c.getString(4),
+                    c.getString(5),c.getString(6));
+
+            Map<String, String> bookMap_i = new HashMap<String, String>();
+            bookMap_i.put("ID", c.getString(0));
+            bookMap_i.put("Name", c.getString(1));
+            bookMap_i.put("Prenom", c.getString(2));
+            bookMap_i.put("Tel", c.getString(3));
+            bookMap_i.put("Email", c.getString(4));
+            bookMap_i.put("Adderess", c.getString(5));
+            bookMap_i.put("Commentaire", c.getString(6));
+            //Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_SHORT).show();
+            listOfPersonne_i.add(bookMap_i);
+
+            c.moveToNext();
+        }
+
+        return listOfPersonne_i;
     }
 
     public void SupprimerWithId(int id){
