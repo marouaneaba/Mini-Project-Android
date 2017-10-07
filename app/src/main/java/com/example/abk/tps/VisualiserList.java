@@ -82,9 +82,19 @@ public class VisualiserList extends AppCompatActivity {
                 new int[] { R.id.Name,R.id.Prenom, R.id.Email});
         //Associe l’adapter et le ListView
             RepertoireList.setAdapter(listAdapter);
+        /*if(c.getCount() == 0){
+            showMessage("Liste de Contact", "Votre List est Vide");
+        }*/
 
     }
 
+    void showMessage(String title, String message){
+        android.support.v7.app.AlertDialog.Builder builder= new android.support.v7.app.AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +112,9 @@ public class VisualiserList extends AppCompatActivity {
         repertoireBDD.open();
 
         Actualiser();
+        if(repertoireBDD.getAllData().getCount() == 0){
+            showMessage("Liste de Contact", "Votre List est Vide");
+        }
         // on insér le contact dans la base de données
 
 
@@ -169,6 +182,7 @@ public class VisualiserList extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(getApplicationContext(), "clique OK : "+map.get("ID"), Toast.LENGTH_SHORT).show();
                         repertoireBDD.SupprimerWithId(Integer.parseInt(map.get("ID")));
+                        Actualiser();
                     }
 
                 });
@@ -199,7 +213,8 @@ public class VisualiserList extends AppCompatActivity {
                 Intent intent = new Intent(VisualiserList.this, AfficherContact.class);
                 //Toast.makeText(getApplicationContext(), "clique Cancel : "+map.get("ID"), Toast.LENGTH_SHORT).show();
                 //Toast.makeText(getApplicationContext(), "hhhh  : id: "+id+" , position : "+position, Toast.LENGTH_SHORT).show();
-                intent.putExtra("numero",""+id);
+                //intent.putExtra("numero",""+id);
+                intent.putExtra("numero",""+map.get("ID"));
                 startActivity(intent);
             }
         });

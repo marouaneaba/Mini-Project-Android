@@ -64,7 +64,7 @@ public class AfficherContact extends AppCompatActivity {
 
         Intent intent = getIntent();
         int position = Integer.parseInt(intent.getStringExtra("numero"));
-        id = position+1;
+        id = position;
         //actualiser();
         /*
         //Toast.makeText(getApplicationContext(), "position : "+position, Toast.LENGTH_SHORT).show();

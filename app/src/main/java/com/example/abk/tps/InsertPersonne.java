@@ -64,13 +64,13 @@ public class InsertPersonne extends AppCompatActivity {
         c = repertoireBdd.getAllData();
         int new_count = c.getCount();
 
-        if(old_count != new_count) {
+        /*if(old_count != new_count) {
             Clear();
             showMessage("insertion Contact", "Votre Contact est bien insérer");
         }
-        else if(old_count == new_count)
+        else if(old_count == new_count) {
             showMessage("insertion Contact", "Erreur Contact, Veuillez vérifier votre contact ");
-
+        }*/
         /* montrez aù premier ligne de notre BD */
             //c.moveToFirst();
 
@@ -109,6 +109,7 @@ public class InsertPersonne extends AppCompatActivity {
         //}
 
         repertoireBdd.close();
+        finish();
         //finish();
         //finish();
         //Toast.makeText(getApplicationContext(), perosnne.toString(), Toast.LENGTH_SHORT).show();

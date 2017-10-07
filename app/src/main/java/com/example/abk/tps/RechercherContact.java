@@ -33,6 +33,25 @@ public class RechercherContact extends AppCompatActivity {
     private String texte;
 
     @Override
+    public void onResume(){
+        super.onResume();
+        Actualiser();
+    }
+
+    @Override
+    public void onDestroy(){
+        super.onDestroy();
+        repertoireBDD.close();
+    }
+
+    @Override
+    public void onStart()
+    {
+        super.onStart();
+        repertoireBDD.open();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recherche_contact);
@@ -67,6 +86,7 @@ public class RechercherContact extends AppCompatActivity {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         Toast.makeText(getApplicationContext(), "clique OK : "+map.get("ID"), Toast.LENGTH_SHORT).show();
                         repertoireBDD.SupprimerWithId(Integer.parseInt(map.get("ID")));
+                        Actualiser();
                     }
 
                 });
@@ -93,37 +113,46 @@ public class RechercherContact extends AppCompatActivity {
                 //on récupère la HashMap contenant les infos de notre item (titre, description, img)
                 HashMap<String, String> map = (HashMap<String, String>) listView.getItemAtPosition(position);
 
-
+                Toast.makeText(getApplicationContext(), "le nombre : "+map.get("ID"), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(RechercherContact.this, AfficherContact.class);
                 //Toast.makeText(getApplicationContext(), "clique Cancel : "+map.get("ID"), Toast.LENGTH_SHORT).show();
                 //Toast.makeText(getApplicationContext(), "hhhh  : id: "+id+" , position : "+position, Toast.LENGTH_SHORT).show();
-                intent.putExtra("numero",""+id);
+                //intent.putExtra("numero",""+(Integer.parseInt(map.get("ID"))-1));
+                intent.putExtra("numero",""+map.get("ID"));
                 startActivity(intent);
             }
         });
 
     }
 
+
     public void Rechercher(View v)
     {
-            int nbr = repertoireBDD.getPersonneByOther(editTexte.getText().toString()+"%",editTexte.getText().toString()+"%",
-                                                editTexte.getText().toString()+"%",editTexte.getText().toString()+"%",
-                                                editTexte.getText().toString()+"%",editTexte.getText().toString()+"%").getCount();
+        Actualiser();
 
-        Cursor c = repertoireBDD.getPersonneByOther(editTexte.getText().toString()+"%",editTexte.getText().toString()+"%",
+
+        //Toast.makeText(getApplicationContext(), "le nombre : "+nbr, Toast.LENGTH_SHORT).show();
+    }
+
+    public void Actualiser(){
+        int nbr = repertoireBDD.getPersonneByOther(editTexte.getText().toString()+"%",editTexte.getText().toString()+"%",
                 editTexte.getText().toString()+"%",editTexte.getText().toString()+"%",
-                editTexte.getText().toString()+"%",editTexte.getText().toString()+"%");
+                editTexte.getText().toString()+"%",editTexte.getText().toString()+"%").getCount();
+    if(!editTexte.getText().toString().equals("")) {
+        Cursor c = repertoireBDD.getPersonneByOther(editTexte.getText().toString() + "%", editTexte.getText().toString() + "%",
+                editTexte.getText().toString() + "%", editTexte.getText().toString() + "%",
+                editTexte.getText().toString() + "%", editTexte.getText().toString() + "%");
 
 
         List<Map<String, String>> list = repertoireBDD.CursorToVectorPersonne(c);
 
         // Cree un adapter faisant le lien entre la liste d'élément et la ListView servant à l'affichage.
         SimpleAdapter listAdapter = new SimpleAdapter(this.getBaseContext(), list, R.layout.personne_detail,
-                new String[] {"Name","Prenom","Email"},
-                new int[] { R.id.Name,R.id.Prenom, R.id.Email});
+                new String[]{"Name", "Prenom", "Email"},
+                new int[]{R.id.Name, R.id.Prenom, R.id.Email});
         //Associe l’adapter et le ListView
         listView.setAdapter(listAdapter);
-
-        Toast.makeText(getApplicationContext(), "le nombre : "+nbr, Toast.LENGTH_SHORT).show();
+    }
+        //Toast.makeText(getApplicationContext(), "le nombre : "+nbr, Toast.LENGTH_SHORT).show();
     }
 }
