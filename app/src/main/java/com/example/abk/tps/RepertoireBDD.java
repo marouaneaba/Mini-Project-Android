@@ -8,7 +8,6 @@ import java.util.*;
 
 /**
  * Created by abakarim marouane on 27/09/2017.
- * Email : Mar.abakarim@gmail.com
  */
 
 public class RepertoireBDD {
