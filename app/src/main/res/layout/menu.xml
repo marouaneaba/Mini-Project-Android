@@ -3,7 +3,8 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:background="@drawable/az">
 
 
     <LinearLayout
@@ -14,10 +15,10 @@
 
         <TextView
             android:layout_gravity="center"
-            android:layout_width="168dp"
+            android:layout_width="250dp"
             android:layout_height="135dp"
             android:gravity="center_vertical|center_horizontal"
-            android:background="@drawable/contacts"/>
+            android:background="@drawable/rr"/>
     </LinearLayout>
 
 

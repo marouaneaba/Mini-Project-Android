@@ -165,7 +165,6 @@ public class VisualiserList extends AppCompatActivity {
                 //on récupère la HashMap contenant les infos de notre item (titre, description, img)
                 final HashMap<String, String> map = (HashMap<String, String>) RepertoireList.getItemAtPosition(position);
 
-                //DFragement dfragment= new DFragement();
 
 
                 //dfragment.show(fm,"gerer livre");

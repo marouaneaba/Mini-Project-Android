@@ -44,75 +44,42 @@ public class InsertPersonne extends AppCompatActivity {
         RepertoireBDD repertoireBdd = new RepertoireBDD(this);
 
 
+        String tel = TelEd.getText().toString().replaceAll(" ","");
 
         Personne perosnne = new Personne(NameEd.getText().toString(),PrenomEd.getText().toString(),
-                TelEd.getText().toString().replaceAll(" ",""),EmailEd.getText().toString(),AddresseEd.getText().toString(),
+                tel,EmailEd.getText().toString(),AddresseEd.getText().toString(),
                 CommentaireEd.getText().toString());
 
         /* on ouvre la base de données pour écrire dedans */
         repertoireBdd.open();
 
-        /*récupération tout les données stocker dans la BD*/
-        Cursor c = repertoireBdd.getAllData();
 
-        int old_count = c.getCount();
+        /* verification de la saisie */
+        String add[] = EmailEd.getText().toString().split("@");
+        if(!EmailEd.getText().toString().contains("@") || !add[1].contains(".")){
+            Toast.makeText(getApplicationContext(), "veuillez saisie une bonne addresse Email ... ", Toast.LENGTH_SHORT).show();
+
+        }else if(tel.startsWith("0") ||     tel.startsWith("+")){
+            Toast.makeText(getApplicationContext(), "veuillez saisie un bonne Numéro de Tél .... ", Toast.LENGTH_SHORT).show();
+
+        }else{
+            /* on insert dans notre Base de données */
+            repertoireBdd.insertPersonne(perosnne);
+        }
+
+
+
+
+
 
         /* on insert dans notre Base de données */
-        repertoireBdd.insertPersonne(perosnne);
+        //repertoireBdd.insertPersonne(perosnne);
 
-        /*récupération tout les données stocker dans la BD*/
-        c = repertoireBdd.getAllData();
-        int new_count = c.getCount();
 
-        /*if(old_count != new_count) {
-            Clear();
-            showMessage("insertion Contact", "Votre Contact est bien insérer");
-        }
-        else if(old_count == new_count) {
-            showMessage("insertion Contact", "Erreur Contact, Veuillez vérifier votre contact ");
-        }*/
-        /* montrez aù premier ligne de notre BD */
-            //c.moveToFirst();
-
-        /*if(c == null)
-            Toast.makeText(getApplicationContext(), "table vide", Toast.LENGTH_SHORT).show();
-        else
-            Toast.makeText(getApplicationContext(), "table non vide : "+c.getString(6), Toast.LENGTH_SHORT).show();
-            */
-
-        /**/
-        /*Vector<Personne> personnesV = new Vector<Personne>();
-        int i=0;
-        while(c.moveToNext()){
-
-            Personne p = new Personne(c.getString(1),c.getString(2),
-                                        c.getString(3),c.getString(4),
-                                        c.getString(5),c.getString(6));
-            Toast.makeText(getApplicationContext(),"i : "+i+" ," +p.toString(), Toast.LENGTH_SHORT).show();
-            i++;
-            personnesV.add(p);
-        }
-
-        for(i=0;i<personnesV.size();i++){
-            Toast.makeText(getApplicationContext(), "i : "+i+" ,"+personnesV.get(i).toString(), Toast.LENGTH_SHORT).show();
-        }*/
-        /**/
-        /*if (c.getCount()==0){
-            showMessage("Error","Aucun objet inseré dans la BD");
-            return;
-        }*/
-
-        //Toast.makeText(getApplicationContext(), "tab size : "+personnesV.size()+" ,BD size : "+c.getCount(), Toast.LENGTH_SHORT).show();
-        /**/
-        //for(Personne persone : personnesV){
-            //Toast.makeText(getApplicationContext(), c.getCount(), Toast.LENGTH_SHORT).show();
-        //}
 
         repertoireBdd.close();
         finish();
-        //finish();
-        //finish();
-        //Toast.makeText(getApplicationContext(), perosnne.toString(), Toast.LENGTH_SHORT).show();
+
     }
 
     void showMessage(String title, String message){
