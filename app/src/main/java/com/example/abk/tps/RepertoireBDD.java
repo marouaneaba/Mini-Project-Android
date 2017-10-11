@@ -91,10 +91,7 @@ public class RepertoireBDD {
 
     public Cursor getPersonneByOther(String name,String prenom,String tel,String email,String adress,String commentaire)
     {
-        /*Cursor c = bdd.query(TABLE_PERSONNES,new String[]{COL_ID,COL_NAME,COL_PRENOM,COL_TEL,
-                COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},"NAME like "+name+"% OR PRENOM like "+prenom+"% " +
-                "OR TEL like "+tel+"% OR EMAIL like "+email+"% OR ADDRESS like "+adress+"% " +
-                "OR COMMENTAIRE like "+commentaire+"% ",null,null,null,null);*/
+
 
         String selectQuery = " select distinct * from "+TABLE_PERSONNES+" where "
                 +"NAME like  '% "+ name

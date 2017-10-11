@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by abk on 01/10/2017.
+ * Created by Marouane Abakarim on 01/10/2017.
  */
 
 public class RechercherContact extends AppCompatActivity {
@@ -115,9 +115,7 @@ public class RechercherContact extends AppCompatActivity {
 
                 Toast.makeText(getApplicationContext(), "le nombre : "+map.get("ID"), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(RechercherContact.this, AfficherContact.class);
-                //Toast.makeText(getApplicationContext(), "clique Cancel : "+map.get("ID"), Toast.LENGTH_SHORT).show();
-                //Toast.makeText(getApplicationContext(), "hhhh  : id: "+id+" , position : "+position, Toast.LENGTH_SHORT).show();
-                //intent.putExtra("numero",""+(Integer.parseInt(map.get("ID"))-1));
+
                 intent.putExtra("numero",""+map.get("ID"));
                 startActivity(intent);
             }
@@ -153,6 +151,6 @@ public class RechercherContact extends AppCompatActivity {
         //Associe l’adapter et le ListView
         listView.setAdapter(listAdapter);
     }
-        //Toast.makeText(getApplicationContext(), "le nombre : "+nbr, Toast.LENGTH_SHORT).show();
+
     }
 }

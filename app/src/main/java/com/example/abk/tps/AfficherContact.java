@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by abk on 30/09/2017.
+ * Created by Marouane abakarim  30/09/2017.
  */
 
 public class AfficherContact extends AppCompatActivity {
@@ -65,18 +65,7 @@ public class AfficherContact extends AppCompatActivity {
         Intent intent = getIntent();
         int position = Integer.parseInt(intent.getStringExtra("numero"));
         id = position;
-        //actualiser();
-        /*
-        //Toast.makeText(getApplicationContext(), "position : "+position, Toast.LENGTH_SHORT).show();
-        Personne p = repertoireBDD.getPersonneById(position+1);
-        repertoireBDD.close();
 
-        Name.setText(p.getName());
-        Prenom.setText(p.getPrenom());
-        Tel.setText(p.getTel());
-        Email.setText(p.getEmail());
-        Adress.setText(p.getAddress());
-        Commentaire.setText(p.getCommentaire());*/
 
     }
 

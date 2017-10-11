@@ -8,6 +8,10 @@ import android.widget.*;
 import android.database.*;
 import java.util.*;
 
+/**
+ * Created by Marouane abakarim  30/09/2017.
+ */
+
 public class InsertPersonne extends AppCompatActivity {
 
     private EditText NameEd;
@@ -59,10 +63,10 @@ public class InsertPersonne extends AppCompatActivity {
         if(!EmailEd.getText().toString().contains("@") || !add[1].contains(".")){
             Toast.makeText(getApplicationContext(), "veuillez saisie une bonne addresse Email ... ", Toast.LENGTH_SHORT).show();
 
-        }else if(tel.startsWith("0") ||     tel.startsWith("+")){
+        }/*else if(tel.startsWith("0") ||     tel.startsWith("+")){
             Toast.makeText(getApplicationContext(), "veuillez saisie un bonne Numéro de Tél .... ", Toast.LENGTH_SHORT).show();
 
-        }else{
+        }*/else{
             /* on insert dans notre Base de données */
             repertoireBdd.insertPersonne(perosnne);
         }

@@ -51,12 +51,15 @@
                     android:text="Nom :" />
 
                 <TextView
-                    android:textStyle="bold|italic"
                     android:id="@+id/LabelName"
+
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Rentrez Nom" />
+                    android:fontFamily="serif"
+                    android:text="Rentrez Nom"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -74,12 +77,14 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:textStyle="bold|italic"
                     android:id="@+id/LabelPrenom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Rentrez Prénom" />
+                    android:fontFamily="serif"
+                    android:text="Rentrez Prénom"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -97,12 +102,14 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:textStyle="bold|italic"
                     android:id="@+id/LabelTel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Rentrez Tél" />
+                    android:fontFamily="serif"
+                    android:text="Rentrez Tél"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
             </LinearLayout>
 
             <LinearLayout
@@ -121,12 +128,14 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:textStyle="bold|italic"
                     android:id="@+id/LabelEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Rentrez Email" />
+                    android:fontFamily="serif"
+                    android:text="Rentrez Email"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
             </LinearLayout>
 
             <LinearLayout
@@ -145,12 +154,14 @@
                     android:layout_weight="1" />
 
                 <TextView
-                    android:textStyle="bold|italic"
                     android:id="@+id/LabelAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Rentrez Address" />
+                    android:fontFamily="serif"
+                    android:text="Rentrez Address"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic" />
             </LinearLayout>
             <TextView
                 android:textColor="#333399"
@@ -162,11 +173,13 @@
                 android:id="@+id/TextCommentaire" />
 
             <TextView
-                android:textStyle="bold|italic"
                 android:id="@+id/LabelCommentaire"
-                android:layout_width="match_parent"
+                android:layout_width="298dp"
                 android:layout_height="150dp"
-                android:text="Commentaire" />
+                android:fontFamily="serif"
+                android:text="Commentaire"
+                android:textSize="20dp"
+                android:textStyle="bold|italic" />
 
             <LinearLayout
                 android:orientation="horizontal"

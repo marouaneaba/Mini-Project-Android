@@ -57,13 +57,14 @@
                     android:layout_weight="1.01" />
 
                 <EditText
-                    android:textStyle="bold|italic"
+                    android:id="@+id/nameeditText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/nameeditText"
-                    android:hint="Entrez le nom" />
+                    android:fontFamily="serif"
+                    android:hint="Rentrez le nom"
+                    android:inputType="textPersonName"
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
@@ -83,13 +84,14 @@
                     android:id="@+id/textView3" />
 
                 <EditText
-                    android:textStyle="bold|italic"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:ems="10"
                     android:id="@+id/prenomeditText3"
                     android:layout_width="match_parent"
-                    android:hint="Entrez le Prénom" />
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:fontFamily="serif"
+                    android:hint="Rentrez le Prénom"
+                    android:inputType="textPersonName"
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
@@ -109,14 +111,15 @@
                     android:layout_weight="10.86" />
 
                 <EditText
-                    android:textStyle="bold|italic"
+                    android:id="@+id/numeroeditText9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:ems="10"
-                    android:id="@+id/numeroeditText9"
                     android:layout_weight="10.86"
-                    android:hint="Entrez Numéro" />
+                    android:ems="10"
+                    android:fontFamily="serif"
+                    android:hint="Rentrez Numéro"
+                    android:inputType="phone"
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
@@ -136,13 +139,14 @@
                     android:layout_width="wrap_content" />
 
                 <EditText
-                    android:textStyle="bold|italic"
                     android:id="@+id/emaileditText5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="Entrez l'email"
-                    android:inputType="textEmailAddress" />
+                    android:fontFamily="serif"
+                    android:hint="Rentrez l'email"
+                    android:inputType="textEmailAddress"
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 
@@ -158,17 +162,17 @@
                     android:text="Addresse :"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:id="@+id/textView6"
-                    android:layout_weight="0.04" />
+                    android:id="@+id/textView6" />
 
                 <EditText
-                    android:textStyle="bold|italic"
+                    android:id="@+id/adderesseeditText6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
                     android:ems="10"
-                    android:id="@+id/adderesseeditText6"
-                    android:hint="Entrez l'Addresse" />
+                    android:fontFamily="serif"
+                    android:hint="Rentrez l'Addresse"
+                    android:inputType="textPersonName"
+                    android:textStyle="bold|italic" />
 
             </LinearLayout>
 

@@ -1,7 +1,7 @@
 package com.example.abk.tps;
 
 /**
- * Created by abk on 29/09/2017.
+ * Created by Marouane Abakarim on 29/09/2017.
  */
 
 import android.app.AlertDialog;
@@ -66,7 +66,6 @@ public class VisualiserList extends AppCompatActivity {
             bookMap_i.put("Email", c.getString(4));
             bookMap_i.put("Adderess", c.getString(5));
             bookMap_i.put("Commentaire", c.getString(6));
-            //Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_SHORT).show();
             listOfPersonne_i.add(bookMap_i);
 
             c.moveToNext();
@@ -82,9 +81,6 @@ public class VisualiserList extends AppCompatActivity {
                 new int[] { R.id.Name,R.id.Prenom, R.id.Email});
         //Associe l’adapter et le ListView
             RepertoireList.setAdapter(listAdapter);
-        /*if(c.getCount() == 0){
-            showMessage("Liste de Contact", "Votre List est Vide");
-        }*/
 
     }
 
@@ -118,46 +114,6 @@ public class VisualiserList extends AppCompatActivity {
         // on insér le contact dans la base de données
 
 
-        //Cursor c = repertoireBDD.getAllData();
-
-        // montrez aù premier ligne de notre BD
-        /*
-        c.moveToFirst();
-
-
-        List<Map<String, String>> listOfPersonne_i = new ArrayList<Map<String, String>>();
-
-        while(!c.isAfterLast()){
-
-            Personne p = new Personne(c.getString(1),c.getString(2),
-                    c.getString(3),c.getString(4),
-                    c.getString(5),c.getString(6));
-
-            Map<String, String> bookMap_i = new HashMap<String, String>();
-            bookMap_i.put("ID", c.getString(0));
-            bookMap_i.put("Name", c.getString(1));
-            bookMap_i.put("Prenom", c.getString(2));
-            bookMap_i.put("Tel", c.getString(3));
-            bookMap_i.put("Email", c.getString(4));
-            bookMap_i.put("Adderess", c.getString(5));
-            bookMap_i.put("Commentaire", c.getString(6));
-            //Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_SHORT).show();
-            listOfPersonne_i.add(bookMap_i);
-
-             c.moveToNext();
-        }
-
-
-
-
-
-        // Cree un adapter faisant le lien entre la liste d'élément et la ListView servant à l'affichage.
-        SimpleAdapter listAdapter = new SimpleAdapter(this.getBaseContext(), listOfPersonne_i, R.layout.personne_detail,
-                new String[] {"Name","Prenom","Email"},
-                new int[] { R.id.Name,R.id.Prenom, R.id.Email});
-        //Associe l’adapter et le ListView
-        RepertoireList.setAdapter(listAdapter);
-    */
         RepertoireList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -166,8 +122,6 @@ public class VisualiserList extends AppCompatActivity {
                 final HashMap<String, String> map = (HashMap<String, String>) RepertoireList.getItemAtPosition(position);
 
 
-
-                //dfragment.show(fm,"gerer livre");
 
                 //on créer une boite de dialogue
                 AlertDialog.Builder adb = new AlertDialog.Builder(VisualiserList.this);
@@ -210,9 +164,6 @@ public class VisualiserList extends AppCompatActivity {
 
 
                 Intent intent = new Intent(VisualiserList.this, AfficherContact.class);
-                //Toast.makeText(getApplicationContext(), "clique Cancel : "+map.get("ID"), Toast.LENGTH_SHORT).show();
-                //Toast.makeText(getApplicationContext(), "hhhh  : id: "+id+" , position : "+position, Toast.LENGTH_SHORT).show();
-                //intent.putExtra("numero",""+id);
                 intent.putExtra("numero",""+map.get("ID"));
                 startActivity(intent);
             }

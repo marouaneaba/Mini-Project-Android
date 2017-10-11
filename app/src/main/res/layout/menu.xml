@@ -45,32 +45,42 @@
         >
 
         <Button
-            android:text="Créer Contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/ajout"
-            android:onClick="CreerMethode"/>
-
-        <Button
-            android:text="visualiser Contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:onClick="CreerMethode"
+            android:text="Créer Contact"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/afficher"
-            android:onClick="VisualiserMethode"/>
-
-        <Button
-            android:text="Recherche Contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:onClick="VisualiserMethode"
+            android:text="visualiser Contact"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/recherch"
-            android:onClick="RecherchMethode"/>
-
-        <Button
-            android:text="Quitter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:onClick="RecherchMethode"
+            android:text="Recherche Contact"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/quitter"
-            android:onClick="QuitterMethode"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:onClick="QuitterMethode"
+            android:text="Quitter"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

@@ -2,7 +2,6 @@ package com.example.abk.tps;
 
 /**
  * Created by abakarim Marouane on 27/09/2017.
- * Email : Mar.abakarim@gmail.com
  */
 
 import android.content.*;
