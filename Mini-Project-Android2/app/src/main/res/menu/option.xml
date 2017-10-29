@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/option"
+        android:title="Options"
+        android:icon="@android:drawable/ic_menu_preferences"
+        >
+        <menu android:id="@+id/sousmenu">
+
+
+            <item android:id="@+id/creerContact"
+                android:title="@string/creer"/>
+
+            <item android:id="@+id/visualiserContact"
+                android:title="@string/visualiser"  />
+
+            <item android:id="@+id/RechercheContact"
+                android:title="@string/Recherche"  />
+        </menu>
+    </item>
+
+    <item android:id="@+id/quitter"
+        android:title="Quitter"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        />
+</menu>
