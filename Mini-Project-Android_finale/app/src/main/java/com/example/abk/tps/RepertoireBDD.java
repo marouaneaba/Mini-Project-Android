@@ -117,6 +117,25 @@ public class RepertoireBDD {
         return c;
     }
 
+    /* modifier un personne à partir son id */
+    public int updateById(int id,Personne personne){
+        //La mise à jour d'un Contact dans la BDD fonctionne plus ou moins comme une insertion
+        //il faut simple préciser quelle contact on doit mettre à jour grâce à l'ID
+        ContentValues values = new ContentValues();
+        values.put(COL_NAME, personne.getName());
+        values.put(COL_PRENOM, personne.getPrenom());
+        values.put(COL_TEL,personne.getTel());
+        values.put(COL_EMAIL,personne.getEmail());
+        values.put(COL_ADDRESS,personne.getAddress());
+        values.put(COL_COMMENTAIRE,personne.getCommentaire());
+        return bdd.update(TABLE_PERSONNES,values, COL_ID + "=" +id, null);
+    }
+
+    /* supprimer un personne à partir son id */
+    public void SupprimerWithId(int id){
+        bdd.delete(TABLE_PERSONNES,COL_ID+" = " + id, null);
+    }
+    
     /* transformer un cursor en List de personne */
     public List<Map<String, String>> CursorToVectorPersonne(Cursor c){
 
@@ -147,25 +166,6 @@ public class RepertoireBDD {
         }
 
         return listOfPersonne_i;
-    }
-
-    /* supprimer un personne à partir son id */
-    public void SupprimerWithId(int id){
-        bdd.delete(TABLE_PERSONNES,COL_ID+" = " + id, null);
-    }
-
-    /* modifier un personne à partir son id */
-    public int updateById(int id,Personne personne){
-        //La mise à jour d'un Contact dans la BDD fonctionne plus ou moins comme une insertion
-        //il faut simple préciser quelle contact on doit mettre à jour grâce à l'ID
-        ContentValues values = new ContentValues();
-        values.put(COL_NAME, personne.getName());
-        values.put(COL_PRENOM, personne.getPrenom());
-        values.put(COL_TEL,personne.getTel());
-        values.put(COL_EMAIL,personne.getEmail());
-        values.put(COL_ADDRESS,personne.getAddress());
-        values.put(COL_COMMENTAIRE,personne.getCommentaire());
-        return bdd.update(TABLE_PERSONNES,values, COL_ID + "=" +id, null);
     }
 
     /* transformer le premiére ligne de cursor en personne */
