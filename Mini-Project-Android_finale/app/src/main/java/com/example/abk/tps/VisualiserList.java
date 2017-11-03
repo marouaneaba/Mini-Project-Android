@@ -60,6 +60,7 @@ public class VisualiserList extends AppCompatActivity {
 
         List<Map<String, String>> listOfPersonne_i = new ArrayList<Map<String, String>>();
 
+        /* n'est pas arrivé au dernier ligne de notre cursor */
         while(!c.isAfterLast()){
 
             Personne p = new Personne(c.getString(1),c.getString(2),
@@ -76,6 +77,7 @@ public class VisualiserList extends AppCompatActivity {
             bookMap_i.put("Commentaire", c.getString(6));
             listOfPersonne_i.add(bookMap_i);
 
+            /* passé au ligne suivant */
             c.moveToNext();
         }
 
@@ -123,7 +125,7 @@ public class VisualiserList extends AppCompatActivity {
             showMessage("Liste de Contact", "Votre List est Vide");
         }
 
-            /* on met un écouteur d'évènement sur notre listView "Long Clique"  */
+            /* on met un écouteur d'évènement sur notre listView "Long Clique" : pour déclencher l'action de supprimer Contact */
         RepertoireList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
@@ -149,6 +151,7 @@ public class VisualiserList extends AppCompatActivity {
                     }
 
                 });
+
                 //on indique que l'on veut le bouton ok à notre boite de dialogue
                 adb.setNegativeButton("Cancel",new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
@@ -164,7 +167,7 @@ public class VisualiserList extends AppCompatActivity {
             }
         });
 
-        //Enfin on met un écouteur d'évènement sur notre listView "Clique"
+        //Enfin on met un écouteur d'évènement sur notre listView "Clique" : déclencher l'action d'afficher le détail de contact 
         RepertoireList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             @SuppressWarnings("unchecked")

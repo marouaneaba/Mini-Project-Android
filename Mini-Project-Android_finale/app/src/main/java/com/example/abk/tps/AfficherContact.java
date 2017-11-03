@@ -69,11 +69,11 @@ public class AfficherContact extends AppCompatActivity {
         //int position = Integer.parseInt(intent.getStringExtra("numero"));
         /* on récupere l'identifiant de personne on veut l'afficher */
         id= Integer.parseInt(intent.getStringExtra("numero"));
-        //id = position;
+    
 
 
     }
-    /* faire une Mise à jour des données on veut l'afficher à partir l'identifiant de personne */
+    /* faire une Mise à jour des données on veut l'afficher à partir l'identifiant de Contact */
     public void actualiser(){
 
         Personne p = repertoireBDD.getPersonneById(id);

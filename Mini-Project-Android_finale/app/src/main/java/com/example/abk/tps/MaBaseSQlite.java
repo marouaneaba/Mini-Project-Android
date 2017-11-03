@@ -20,6 +20,7 @@ public class MaBaseSQlite extends SQLiteOpenHelper{
     private static final String COL_EMAIL = "EMAIL";
     private static final String COL_ADDRESS = "ADDRESS";
     private static final String COL_COMMENTAIRE = "COMMENTAIRE";
+    /* définition de notre Table */
     private static final String CREATE_BDD = "CREATE TABLE " + TABLE_NAME + "("
             + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + COL_NAME + " TEXT NOT NULL, "

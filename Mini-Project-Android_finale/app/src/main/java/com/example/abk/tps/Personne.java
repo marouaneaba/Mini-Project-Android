@@ -43,10 +43,11 @@ public class Personne {
                 " ,Address : "+this.Address+" ,Commentaire : "+this.Commentaire;
     }
 
+    /* return le NOM de Contact */
     public String getName() {
         return Name;
     }
-
+    /* return le ID de Contact */
     public static int getId() {
         return id;
     }

@@ -71,14 +71,15 @@ public class RechercherContact extends AppCompatActivity {
         texte = textView.getText().toString();
 
         repertoireBDD = new RepertoireBDD(this);
+        /* Ouvrire notre BD */
         repertoireBDD.open();
 
-
+        /* On met un écouteur d'évènement " LongClick "  sur la liste View , pour Déclencher l'action de supprimer un contact séléctionner */
         listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
 
-                //on récupère la HashMap contenant les infos de notre item (titre, description, img)
+                //on récupère la HashMap contenant les infos de notre item séléctionner (titre, description, img)
                 final HashMap<String, String> map = (HashMap<String, String>) listView.getItemAtPosition(position);
 
                 //on créer une boite de dialogue
@@ -112,7 +113,7 @@ public class RechercherContact extends AppCompatActivity {
             }
         });
 
-        //Enfin on met un écouteur d'évènement sur notre listView
+        //Enfin on met un écouteur d'évènement "CLICK" sur notre listView : pour afficher le contact en détail.
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             @SuppressWarnings("unchecked")
@@ -130,7 +131,7 @@ public class RechercherContact extends AppCompatActivity {
 
     }
 
-
+    /* mise à jour les données afficher aù utilisateur */
     public void Rechercher(View v)
     {
         Actualiser();

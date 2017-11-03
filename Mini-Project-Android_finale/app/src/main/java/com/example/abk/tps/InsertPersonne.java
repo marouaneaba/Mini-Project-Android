@@ -81,7 +81,9 @@ public class InsertPersonne extends AppCompatActivity {
 
     }
 
-    /* afficher des notification */
+    /* afficher des notification 
+    * titre : titre de notification
+    * message : message vas étre afficher */
     void showMessage(String title, String message){
         AlertDialog.Builder builder= new AlertDialog.Builder(this);
         builder.setCancelable(true);
@@ -96,6 +98,7 @@ public class InsertPersonne extends AppCompatActivity {
         Clear();
     }
 
+    /* vider les champs saisie */
     public void Clear()
     {
         NameEd.setText("");

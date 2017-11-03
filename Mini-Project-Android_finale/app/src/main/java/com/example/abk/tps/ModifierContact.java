@@ -37,7 +37,9 @@ public class ModifierContact extends AppCompatActivity {
         ECommentaire = (EditText)findViewById(R.id.ECommentaire);
 
         repertoireBDD = new RepertoireBDD(this);
+        /* ouvrire notre BD */
         repertoireBDD.open();
+        /* récupérer le contact à partir de l'ID (id de contact à modifier) */
         Personne p = repertoireBDD.getPersonneById(position);
         EName.setText(p.getName());
         EPrenom.setText(p.getPrenom());
