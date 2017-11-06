@@ -11,6 +11,7 @@ import android.widget.Toast;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /**
  * Created by Marouane abakarim  30/09/2017.
  */
@@ -69,14 +70,14 @@ public class AfficherContact extends AppCompatActivity {
         //int position = Integer.parseInt(intent.getStringExtra("numero"));
         /* on récupere l'identifiant de personne on veut l'afficher */
         id= Integer.parseInt(intent.getStringExtra("numero"));
-        //id = position;
+
 
 
     }
     /* faire une Mise à jour des données on veut l'afficher à partir l'identifiant de personne */
     public void actualiser(){
 
-        /* Personne p = repertoireBDD.getPersonneById(id);*/
+        Personne p = repertoireBDD.getPersonneById(id);
 
         Name.setText(p.getName());
         Prenom.setText(p.getPrenom());

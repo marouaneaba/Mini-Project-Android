@@ -40,7 +40,7 @@ public class InsertPersonne extends AppCompatActivity {
     {
 
         /* création d'une instance de la classe RepertoireBDD */
-/******* RepertoireBDD repertoireBdd = new RepertoireBDD(this); */
+         RepertoireBDD repertoireBdd = new RepertoireBDD(this);
 
         /* on supprimer tout les espaces dans la saisie de Tél d'utilisateur*/
         String tel = TelEd.getText().toString().replaceAll(" ","");
@@ -51,7 +51,9 @@ public class InsertPersonne extends AppCompatActivity {
                 CommentaireEd.getText().toString());
 
         /* on ouvre la base de données pour écrire dedans */
-/*******  repertoireBdd.open();*/
+
+        /* Ouverture la base de données */
+        /* TODO */
 
 
         /* verification de la saisie */
@@ -66,9 +68,9 @@ public class InsertPersonne extends AppCompatActivity {
 
         }else{
             /* on insert dans notre Base de données */
-/****** repertoireBdd.insertPersonne(perosnne);*/
+             repertoireBdd.insertPersonne(perosnne);
             /* on férme notre BDD */
-/******* repertoireBdd.close();*/
+             /* TODO */
             /* aprés on a vérifier l'address Email et le Tél d'utilisateur et on a insérer notre Objet Personne
              * créer dans notre base de données on férem l'activity et on revient aù notre menu */
             finish();

@@ -20,14 +20,8 @@ public class MaBaseSQlite extends SQLiteOpenHelper{
     private static final String COL_EMAIL = "EMAIL";
     private static final String COL_ADDRESS = "ADDRESS";
     private static final String COL_COMMENTAIRE = "COMMENTAIRE";
-    /*private static final String CREATE_BDD = "CREATE TABLE " + TABLE_NAME + "("
-            + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + COL_NAME + " TEXT NOT NULL, "
-            + COL_PRENOM + " TEXT NOT NULL, "
-            + COL_TEL + " TEXT NOT NULL, "
-            + COL_EMAIL + " TEXT NOT NULL, "
-            + COL_ADDRESS + " TEXT NOT NULL, "
-            + COL_COMMENTAIRE +" TEXT NOT NULL );";*/
+    private static final String CREATE_BDD = /* TODO */
+
 
 
 

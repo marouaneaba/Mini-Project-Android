@@ -2,139 +2,22 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\e20ff4bbc78385d4d70c9ebe003bd24332739ba7\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/m2eserv/abakarim/Bureau/android/Mini-Project-Android/Mini-Project-Android_finale/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_2eeb0fb79639683b91872afe325f2abf89953f4c.jar" />
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/m2eserv/abakarim/Bureau/android/Mini-Project-Android/Mini-Project-Android_finale/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b9308bcd80008b0e3abd289e5415fcccc7d62354/classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\e20ff4bbc78385d4d70c9ebe003bd24332739ba7\output\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/m2eserv/abakarim/Bureau/android/Mini-Project-Android/Mini-Project-Android_finale/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f83b00041ecfba705603fec40363416c7de69719">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_289c5a3eb8713f1e0fc8446443731287809f8005.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\fb466b1f0dff734f52b0cc390fc4a46f8a597a5f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_403590ed93e256c125ad73b293112cc4d32772ec.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\2553dff03a9d8ed8790153d0a22cff352ef6b67f\output\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_c852da6a0263ca4cd2611bf1f402d45b6ffefe2e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\support-annotations-25.0.1_98bc626e2cadfad98ebcd216d023d57f22aeffea.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\06c03db409c5b452f2aceed36c0f0728b618c35b\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_2df8b00fbe3eb3fe582fb0a07c98bc3467ae6201.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\b8f707bf0b758b1d641a3227c5509a7bd3cbb0cf\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_49605335c75133da84b569bdbd05e6d73dee0696.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\791fae5def7851017f1b238069709eed3effda10\output\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_86d3ed90afeb03107029dc48d872099c75b36231.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\fb466b1f0dff734f52b0cc390fc4a46f8a597a5f\output\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_98ac1475d56629126c0e97408d4898f64f135695.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\e733d2ddb9fdc79736e46bfe3903b1d3a3c5cbd6\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_86379a3a606d227afeaa0e99918bd3a96e78c6ed.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\06c03db409c5b452f2aceed36c0f0728b618c35b\output\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\internal_impl-25.0.1_1d9a5058c71eb2cbc92a11f3b0b5e63b03165c13.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\7500f5d216b60fd25232d4b25796c376b9fe07eb\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_05213b4f4f2170ffe74a5facd51f3f4593b7ddc6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\86047eecb754fa33f803d7f242239241d0b4a076\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_845131864071138572172d15a512b509947b212d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\791fae5def7851017f1b238069709eed3effda10\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_7f68266b82a695ba3c89cd7934da501e97a0e982.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\abk\.android\build-cache\2553dff03a9d8ed8790153d0a22cff352ef6b67f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
-        <dex dex="C:\Users\abk\Desktop\Android_Tps\Mini-Project-Android\app\build\intermediates\pre-dexed\debug\classes_a944f2f385eb38d79a63228028f9ce1679bc3784.jar" />
+        sha1="baaa929ebce0d617103decaa610d869c4613b1c7">
+        <dex dex="/home/m2eserv/abakarim/Bureau/android/Mini-Project-Android/Mini-Project-Android_finale/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_7ae662a646d70a1c72086ce46558744c722041b1/classes.dex" />
     </item>
 
 </items>

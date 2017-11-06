@@ -41,132 +41,95 @@ public class RepertoireBDD {
 
     public RepertoireBDD(Context context){
         //On créer la BDD et sa table
-        /* maBaseSQLite = new MaBaseSQlite(context, NOM_BDD, null, VERSION_BDD);*/
+         maBaseSQLite = new MaBaseSQlite(context, NOM_BDD, null, VERSION_BDD);
     }
 
     public void open(){
         //on ouvre la BDD en écriture
-        /*bdd = maBaseSQLite.getWritableDatabase();*/
+        /* TODO */
     }
 
     public void close(){
         //on ferme l'accès à la BDD
-        /*bdd.close();*/
+        /* TODO */
     }
 
     public SQLiteDatabase getBDD(){
         /* méthode retourne notre bases de données */
-        /*return bdd;*/
+        return bdd;
     }
 
     /* insérer un personne dans notre base de données */
-    /*public void insertPersonne(Personne personne){
+    public void insertPersonne(Personne personne){
         //Création d'un ContentValues (fonctionne comme une HashMap)
         ContentValues values = new ContentValues();
         //on lui ajoute une valeur associé à une clé (qui est le nom de la colonne dans laquelle on veut mettre la valeur)
-        //values.put(COL_ID, personne.getId());
-        values.put(COL_NAME, personne.getName());
-        values.put(COL_PRENOM, personne.getPrenom());
-        values.put(COL_TEL,personne.getTel());
-        values.put(COL_EMAIL,personne.getEmail());
-        values.put(COL_ADDRESS,personne.getAddress());
-        values.put(COL_COMMENTAIRE,personne.getCommentaire());
+        /* TODO */
+
 
         //on insère l'objet dans la BDD via le ContentValues
-        bdd.insert(TABLE_PERSONNES, null, values);
-    }*/
+       /* bdd.insert(TABLE_PERSONNES, null, values); */
+    }
 
     /* récupérer tout les données de notre bases de données */
-    /*public Cursor getAllData(){
+    public Cursor getAllData(){
         Cursor res = bdd.query(TABLE_PERSONNES, new String[] {COL_ID, COL_NAME, COL_PRENOM,COL_TEL,
                 COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},  null, null, null, null,null);
         return res;
-    }*/
+    }
 
     /* retourner un personne à partir son id */
-    /*public Personne getPersonneById(int id)
+    public Personne getPersonneById(int id)
     {
-        Cursor c = bdd.query(TABLE_PERSONNES,new String[]{COL_ID,COL_NAME,COL_PRENOM,COL_TEL,
-                COL_EMAIL,COL_ADDRESS,COL_COMMENTAIRE},"ID like "+"'%"+id+"%'",null,null,null,null);
+        /* TODO */
+        String nom_table = ;
+        String[] Column =;
+        String Where = ;
+        Cursor c = bdd.query(nom_table,Column,Where,null,null,null,null);
         return cursorToPersonne(c);
-    }*/
+    }
 
     /* retourner un personne à partir un mot-clé (nom ,prénom ,Tél, Email, Address,Commentaire )*/
-    /*public Cursor getPersonneByOther(String name,String prenom,String tel,String email,String address,String commentaire)
+    public Cursor getPersonneByOther(String name,String prenom,String tel,String email,String address,String commentaire)
     {
-
-
-        String selectQuery = " select distinct * from "+TABLE_PERSONNES+" where "
-                +"NAME like  '% "+ name+"%"
-                + "' or NAME like  '"+ name+"%"
-                + "' or PRENOM like '% "+ prenom+"%"
-                + "' or PRENOM like '"+ prenom+"%"
-                + "' or TEL like '"+ tel+"%"
-                + "' or TEL like '%"+ tel+"%"
-                + "' or EMAIL like '% "+ email+"%"
-                + "' or EMAIL like '"+ email+"%"
-                + "' or ADDRESS like '% "+ address+"%"
-                + "' or ADDRESS like '"+ address+"%"
-                + "' or COMMENTAIRE like '% "+ commentaire+"%"
-                + "' or COMMENTAIRE like '"+ commentaire+"+\"%\"'";
+        String selectQuery = "TODO";
+        /* TODO */
          
 
         // on met le résultat dans un Cursor
         Cursor c = bdd.rawQuery(selectQuery, null);
 
         return c;
-    }*/
+    }
 
     /* transformer un cursor en List de personne */
-    /*public List<Map<String, String>> CursorToVectorPersonne(Cursor c){
+    public List<Map<String, String>> CursorToVectorPersonne(Cursor c){
 
 
-        /* passé au le premiére ligne
+        /* passé au le premiére ligne */
         c.moveToFirst();
         List<Map<String, String>> listOfPersonne_i = new ArrayList<Map<String, String>>();
 
 
-        while(!c.isAfterLast()){
-
-            Personne p = new Personne(c.getString(1),c.getString(2),
-                    c.getString(3),c.getString(4),
-                    c.getString(5),c.getString(6));
-
-            Map<String, String> bookMap_i = new HashMap<String, String>();
-            bookMap_i.put("ID", c.getString(0));
-            bookMap_i.put("Name", c.getString(1));
-            bookMap_i.put("Prenom", c.getString(2));
-            bookMap_i.put("Tel", c.getString(3));
-            bookMap_i.put("Email", c.getString(4));
-            bookMap_i.put("Adderess", c.getString(5));
-            bookMap_i.put("Commentaire", c.getString(6));
-            //Toast.makeText(getApplicationContext(), p.toString(), Toast.LENGTH_SHORT).show();
-            listOfPersonne_i.add(bookMap_i);
-
-            c.moveToNext();
-        }
+        /* TODO */
 
         return listOfPersonne_i;
-    }*/
+    }
 
     /* supprimer un personne à partir son id */
-    /*public void SupprimerWithId(int id){
-        bdd.delete(TABLE_PERSONNES,COL_ID+" = " + id, null);
-    }*/
+    public void SupprimerWithId(int id){
+        /* TODO */
+    }
 
     /* modifier un personne à partir son id */
-    /*public int updateById(int id,Personne personne){
+    public int updateById(int id,Personne personne){
         //La mise à jour d'un Contact dans la BDD fonctionne plus ou moins comme une insertion
         //il faut simple préciser quelle contact on doit mettre à jour grâce à l'ID
         ContentValues values = new ContentValues();
-        values.put(COL_NAME, personne.getName());
-        values.put(COL_PRENOM, personne.getPrenom());
-        values.put(COL_TEL,personne.getTel());
-        values.put(COL_EMAIL,personne.getEmail());
-        values.put(COL_ADDRESS,personne.getAddress());
-        values.put(COL_COMMENTAIRE,personne.getCommentaire());
+        /* values.put(COL_NAME, personne.getName()); */
+        /* TODO */
         return bdd.update(TABLE_PERSONNES,values, COL_ID + "=" +id, null);
-    }*/
+    }
 
     /* transformer le premiére ligne de cursor en personne */
     public Personne cursorToPersonne(Cursor c){

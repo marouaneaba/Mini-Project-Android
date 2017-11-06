@@ -45,7 +45,7 @@ public class RechercherContact extends AppCompatActivity {
         super.onDestroy();
       /* lorsque que l'activité a fini son cycle de vie
         * la base de données ne serait pas utiliser ,
-        * faut fermer notre base de données*/
+        * faut fermer notre base de données */
         repertoireBDD.close();
     }
 
@@ -140,12 +140,12 @@ public class RechercherContact extends AppCompatActivity {
     public void Actualiser(){
 
     if(!editTexte.getText().toString().equals("")) {
-        /*Cursor c = repertoireBDD.getPersonneByOther(editTexte.getText().toString(), editTexte.getText().toString(),
+        Cursor c = repertoireBDD.getPersonneByOther(editTexte.getText().toString(), editTexte.getText().toString(),
                 editTexte.getText().toString(), editTexte.getText().toString(),
                 editTexte.getText().toString(), editTexte.getText().toString());
 
 
-        List<Map<String, String>> list = repertoireBDD.CursorToVectorPersonne(c);*/
+        List<Map<String, String>> list = repertoireBDD.CursorToVectorPersonne(c);
 
         // Cree un adapter faisant le lien entre la liste d'élément et la ListView servant à l'affichage.
         SimpleAdapter listAdapter = new SimpleAdapter(this.getBaseContext(), list, R.layout.personne_detail,

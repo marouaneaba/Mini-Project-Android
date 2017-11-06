@@ -60,10 +60,11 @@ public class VisualiserList extends AppCompatActivity {
         RepertoireList = (ListView) findViewById(R.id.ContactList);
 
          // création d'une instance de la classe RepertoireBDD
-/********         repertoireBDD = new RepertoireBDD(this);*/
+        repertoireBDD = new RepertoireBDD(this);
 
         // on ouvre la base de données pour écrire dedans
-/******* repertoireBDD.open();*/
+        /* TODO */
+
 
         /* on récuper les données à partir la base de données */
         Actualiser();
@@ -135,7 +136,7 @@ public class VisualiserList extends AppCompatActivity {
     /* daire la Mise à jour des données on veut l'afficher à pertir l'identifiant de personne */
     public void Actualiser(){
 
-        /*Cursor c = repertoireBDD.getAllData();
+        Cursor c = repertoireBDD.getAllData();
 
         // montrez aù premier ligne de notre BD
         c.moveToFirst();
@@ -159,7 +160,7 @@ public class VisualiserList extends AppCompatActivity {
             listOfPersonne_i.add(bookMap_i);
 
             c.moveToNext();
-        }*/
+        }
 
 
 
