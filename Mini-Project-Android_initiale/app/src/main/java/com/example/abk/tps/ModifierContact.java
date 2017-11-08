@@ -61,7 +61,7 @@ public class ModifierContact extends AppCompatActivity {
                                     EAddress.getText().toString(),ECommentaire.getText().toString());
 
         /* on modifier "personne" dans notre bases de données */
-        repertoireBDD.updateById(position,p);
+/******** repertoireBDD.updateById(position,p); */
        /* aprés la modification on ferme l'activité */
         finish();
     }

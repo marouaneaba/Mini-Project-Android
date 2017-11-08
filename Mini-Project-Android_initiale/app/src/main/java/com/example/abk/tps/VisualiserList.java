@@ -63,7 +63,7 @@ public class VisualiserList extends AppCompatActivity {
         repertoireBDD = new RepertoireBDD(this);
 
         // on ouvre la base de données pour écrire dedans
-        /* TODO */
+        repertoireBDD.open();
 
 
         /* on récuper les données à partir la base de données */

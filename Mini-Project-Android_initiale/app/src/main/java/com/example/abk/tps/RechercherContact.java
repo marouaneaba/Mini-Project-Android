@@ -46,7 +46,7 @@ public class RechercherContact extends AppCompatActivity {
       /* lorsque que l'activité a fini son cycle de vie
         * la base de données ne serait pas utiliser ,
         * faut fermer notre base de données */
-        repertoireBDD.close();
+/************** repertoireBDD.close(); */
     }
 
     @Override
@@ -55,7 +55,7 @@ public class RechercherContact extends AppCompatActivity {
         super.onStart();
       /* avant de démarer l'activité
         * on peux ouvrire notre base de données pour écrire dedans */
-        repertoireBDD.open();
+ /*********** repertoireBDD.open(); */
     }
 
     @Override
